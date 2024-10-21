@@ -30,5 +30,18 @@ def main():
         if another == "yes":
             continue
 
+        # Summary of entries
+        if individuals:
+        oldest_name = max(individuals, key=individuals.get)  # finds the oldest person using max() with individuals.get to get the maximum age
+        oldest_age = individuals[oldest_name]
+
+        print("\n--- Summary of Entries ---") # Prints a summary of all entries, including the oldest person and their age
+        for person, age in individuals.items():  # for loop iterates over all items in the individuals dictionary
+            print(f"{person}: {age} years old")
+                  
+        print(f"\nThe oldest person is {oldest_name} with the age of {oldest_age}.")  # Finally, it prints out who the oldest person is along with their age
+
+
+
 
 
