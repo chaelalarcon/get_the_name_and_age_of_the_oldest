@@ -14,7 +14,7 @@ def main():
         # Try to get age input and validate
         try: 
             age_input = input("Enter your age: ") # Get input as a string
-            age = int(age_input) # convert to integer
+            age = int(age_input) # Attemp to convert into integer
 
             if age < 0 or age > 100:  
                 raise ValueError("Age must be between 0 and 100")
