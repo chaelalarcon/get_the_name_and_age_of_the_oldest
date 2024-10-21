@@ -19,3 +19,8 @@ def main():
             print(f"Error! {e} Please enter a valid age")
             continue 
 
+        individuals[name] = age  # If both name and age are valid, it adds the name and age to the individuals dictionary
+
+        
+
+
