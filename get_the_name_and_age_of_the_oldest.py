@@ -11,12 +11,15 @@ def main():
             print("Error! Invalid name. Please enter a valid name (letters only).")
             continue
 
-        age = int(input("Enter your age: "))
-        try: # Used to catch potential errors
+        # Try to get age input and validate
+        try: 
+            age_input = input("Enter your age: ") # Get input as a string
+            age = int(age_input) # convert to integer
+
             if age < 0 or age > 100:  
                 raise ValueError("Age must be between 0 and 100")
-        except ValueError as e: # ValueError would be raised if the age is invalid
-            print(f"Error! {e} Please enter a valid age")
+        except ValueError: # ValueError would be raised if the age is invalid
+            print("Error! Please enter a valid age (numbers only from 0-100).")
             continue 
 
         individuals[name] = age  # If both name and age are valid, it adds the name and age to the individuals dictionary
@@ -24,11 +27,9 @@ def main():
         # Asking for another input
         another = input("Do you want to input another entry? (Yes/No): ").strip().lower() # The input is stripped of whitespace and converted to lowercase
         
-        # If the user answers "no," the loop breaks; if "yes," it continues
+        # If the user answers "no," the loop breaks
         if another == "no": 
             break
-        if another == "yes":
-            continue
 
     # Summary of entries
     if individuals:
