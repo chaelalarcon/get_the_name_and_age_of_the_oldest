@@ -30,8 +30,8 @@ def main():
         if another == "yes":
             continue
 
-        # Summary of entries
-        if individuals:
+    # Summary of entries
+    if individuals:
         oldest_name = max(individuals, key=individuals.get)  # finds the oldest person using max() with individuals.get to get the maximum age
         oldest_age = individuals[oldest_name]
 
@@ -41,6 +41,11 @@ def main():
                   
         print(f"\nThe oldest person is {oldest_name} with the age of {oldest_age}.")  # Finally, it prints out who the oldest person is along with their age
 
+    else:
+        print("No entries were made.") # If individuals is empty, it informs the user that no entries were made
+
+if __name__ == "__main__": # This checks if the script is being run directly (not imported), and if so, it calls the main() function to execute the program
+    main()
 
 
 
