@@ -21,6 +21,14 @@ def main():
 
         individuals[name] = age  # If both name and age are valid, it adds the name and age to the individuals dictionary
 
+        # Asking for another input
+        another = input("Do you want to input another entry? (Yes/No): ").strip().lower() # The input is stripped of whitespace and converted to lowercase
         
+        # If the user answers "no," the loop breaks; if "yes," it continues
+        if another == "no": 
+            break
+        if another == "yes":
+            continue
+
 
 
