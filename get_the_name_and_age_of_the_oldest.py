@@ -11,6 +11,11 @@ def main():
             print("Error! Invalid name. Please enter a valid name (letters only).")
             continue
 
-
-
+        age = int(input("Enter your age: "))
+        try: 
+            if age < 0 and age > 100:
+                raise ValueError("Age must be between 0 and 100")
+        except ValueError as e:
+            print(f"Error! {e} Please enter a valid age")
+            continue
 
