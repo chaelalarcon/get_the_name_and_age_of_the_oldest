@@ -8,7 +8,7 @@ def main():
     while True:
         name = input("Enter your name: ")
         if not is_valid_name(name): # Checks if the name is valid using is_valid_name()
-            print("Error! Invalid name. Please enter a valid name (letters only).")
+            print("Error! Invalid name. Please enter a valid name (letters, spaces, hyphens, and apostrophes are allowed).")
             continue
 
         # Try to get age input and validate
