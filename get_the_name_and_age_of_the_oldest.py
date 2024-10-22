@@ -1,5 +1,5 @@
 def is_valid_name(name): # This function checks if a given name is valid
-    return name.isalpha() and len(name)  # Checks if the name contains only alphabetic characters and not empty
+    return all(c.isalpha() or c in " -'" for c in name) and len(name) > 0  # Allow letters, spaces, hyphens, and apostrophes
 
 def main():
     individuals = {} # Initialize individuals as an empty dictionary
